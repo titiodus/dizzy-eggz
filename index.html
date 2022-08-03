@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>ALTSCHOOL ID CARD</title>
+</head>
+<body>
+    <main class="container">
+
+        <div class="left-container">
+            <div class="card">
+                <div class="photos">
+                    <img src="#" class="coy-logo" alt="AltSchool Africa's logo">
+                    <img src="#" class="id-photo" alt="Student's picture showing face fully">  
+                </div>
+                <p class="name-label">Name:</p>
+                <p class="school-label">School:</p>
+                <p class="track-label">Track:</p>
+                <p class="id-label">ID Number:</p>
+
+            </div>
+            <!-- <label for=""     -->
+        </div>
+
+        <div class="right-container">
+            <form class="card-info" action="#" method="post">
+                <label for="my-photo">Select a file:</label>
+                <input type="file" id="my-photo" name="my-photo">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="FirstName LastName" required>
+                <label for="school">Select School</label>
+                <select name="school" id="school">
+                    <option value="">Choose School</option>
+                    <option value="School of Data">School of Data</option>
+                    <option value="School of Engineering">School of Engineering</option>
+                    <option value="School of Products">School of Product</option>
+                </select>
+                <label for="track">Select Track</label>
+                <select name="track" id="track">
+                    <option value="">Choose Track</option>
+                    <option value="Backend">Backend Engineering</option>
+                    <option value="Cloud">Cloud Engineering</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Data Engineering">Data Engineering</option>
+                    <option value="Data Science">Data Science</option> 
+                    <option value="Frontend">Frontend Engineering</option>
+                    <option value="Product Design">Product Design</option>
+                    <option value="Product Management">Product Management</option>
+                    <option value="Product Marketing">Product Marketing</option>
+                </select> 
+                <label for="idNumber">ID Number</label>
+                <input type="text" id="idNumber" name="idNumber" placeholder="Enter your ID number" required>
+                <button id="download-btn">Download</button>
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>
