@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    max-width: 500px;
+    max-width: 90%;
+    border: 2px solid red;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    max-width: 50%;
+    display: flex;
+    border: 5px solid green;
+    text-align: center;
+}
+
+
+.right-container {
+    display: block;
+    max-width: 230px;
+    max-width:50%;
+    border: 5px solid blue;
+}
+
+form {
+    max-width: 100%;
+    
+}
