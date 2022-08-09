@@ -5,8 +5,10 @@
 body {
     margin: 0;
     padding: 0;
-    
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
+/* LAYOUT */
 
 .container {
     max-width: 370px;
@@ -24,15 +26,26 @@ body {
     text-align: center;
 }
 
-
 .right-container {
     display: block;
-    max-width: 230px;
     max-width:50%;
     border: 5px solid blue;
+    padding: 5px;
+    
 }
 
 form {
-    max-width: 100%;
+    max-width: 182px;
+    max-width: 80%;
     
+}
+
+#my-photo,
+#fullname,
+#school,
+#track,
+#idNumber,
+#download-btn {
+    width: 100%;
+    margin-bottom: 5px;
 }
