@@ -9,8 +9,8 @@ body {
 }
 
 .container {
-    max-width: 500px;
-    max-width: 90%;
+    max-width: 370px;
+    width: 90%;
     border: 2px solid red;
     margin: 0 auto;
     display: flex;
