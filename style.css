@@ -44,7 +44,19 @@ body {
     display: flex;
     /* border: 5px solid green; */
     text-align: center;
+    background-color: #edf2f4;
     
+}
+
+.top-left {
+    background: #080808;
+    border: 2px solid red;
+    width: 70px;
+    height: 70px;
+    /* border-radius: 50%; */
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 50px;
 }
 
 .right-container {
@@ -53,6 +65,8 @@ body {
     border-left: 2px solid #676767;
     padding: 5px;
     background: #d3d3d3;
+    padding-top: 30px;
+    padding-left: 10px;
     
 }
 
