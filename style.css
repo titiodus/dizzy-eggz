@@ -24,39 +24,54 @@ body {
 }
 
 .coy-logo {
-    /* background-image: url("images/Altschoollogo.jpeg"); */
-     width: 100%; 
-     max-width: 70px;
+    width: 100%; 
+    max-width: 70px;
     /* border: 2px sold orangered; */
     margin: 0;
     padding: 0;
+    background-color: transparent;
 }
 
-.id-photo {
+#id-photo {
    width: 100%;
-   max-width: 70%;
+   max-width: 50%;
+   height: 90px;
    margin: 0;
-   padding: 0; 
+   padding: 0;
+   border: 1px solid #676767;
+   background-position: center; 
+   background-size: cover;
 }
 
 .left-container {
-    max-width: 50%;
+    width: 185px;
     display: flex;
-    /* border: 5px solid green; */
+    /* border: 2px solid green; */
     text-align: center;
     background-color: #edf2f4;
     
 }
 
-.top-left {
-    background: #080808;
-    border: 2px solid red;
-    width: 70px;
-    height: 70px;
-    /* border-radius: 50%; */
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 25px;
-    border-top-right-radius: 50px;
+.photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fcf5ed;
+    width: 185px;
+
+}
+
+.id-card {
+    background: #fefefe;
+    height: 49%;
+}
+
+.name-label {
+    margin-block-start: 0;
+}
+
+.id-label {
+    margin-block-end: 0;
 }
 
 .right-container {
@@ -80,7 +95,7 @@ form {
 #school,
 #track,
 #idNumber,
-#download-btn {
+#select-btn {
     width: 100%;
     margin-bottom: 5px;
     padding: 3px 5px;
