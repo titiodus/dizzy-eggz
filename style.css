@@ -32,6 +32,15 @@ body {
     background-color: transparent;
 }
 
+.banner {
+    width: 100%;
+    max-width: 300px;
+    background-color: #6772E5;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+}
+
 #id-photo {
    width: 100%;
    max-width: 50%;
@@ -66,21 +75,23 @@ body {
     height: 49%;
 }
 
-.name-label {
+#name-label {
     margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: 5px;
 }
 
-.id-label {
+#id-label {
+    margin-block-start: 0;
     margin-block-end: 0;
 }
 
 .right-container {
     display: block;
-    max-width:50%;
+    max-width: 185px;
     border-left: 2px solid #676767;
-    padding: 5px;
     background: #d3d3d3;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 10px;
     
 }
@@ -90,16 +101,42 @@ form {
     max-width: 80%;   
 }
 
+#btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+
+#select-btn,
+#download-btn {
+    background-color: #6772E5;
+    border: 1px solid #676767;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 14px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 #my-photo,
 #fullname,
 #school,
 #track,
-#idNumber,
-#select-btn {
+#idNumber{
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     padding: 3px 5px;
     border-radius: 5px;
     border: 1px solid #676767;
 }
 
+span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #676767;
+}

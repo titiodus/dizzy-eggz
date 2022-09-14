@@ -1,4 +1,8 @@
 // Declaring the variables
+const nameLabel = document.getElementById("name-label");
+const schoolLabel = document.getElementById("school-label");
+const trackLabel = document.getElementById("track-label");
+const idLabel = document.getElementById("id-label");
 const myPhoto = document.getElementById("my-photo");
 const fullName = document.getElementById("fullname");
 const school = document.getElementById("school");
@@ -16,13 +20,23 @@ myPhoto.addEventListener("change", function(){
   reader.readAsDataURL(this.files[0]);
 })
 
-
+function getInputs(){
+   nameLabel.innerHTML += fullName.value;
+  schoolLabel.innerHTML += school.value;
+  trackLabel.innerHTML += track.value;
+  idLabel.innerHTML += idNumber.value;
+  const data = {nameLabel, schoolLabel, trackLabel, idLabel}
+  // console.log(data)
+}
 
 
 // Creating the event listener
-// document
-//   .getElementById("select-btn")
-//   .addEventListener("click", function (event) {
+document
+  .getElementById("select-btn")
+  .addEventListener("click", function(event) {
+    event.preventDefault();
+    getInputs();
+    // nameLabel.innerHTML = fullName.value;
 //     // photoLoader()
 //     let photo = myPhoto.value;
 //     let name = fullName.value;
@@ -33,4 +47,4 @@ myPhoto.addEventListener("change", function(){
 //     // alert(myTrack)
 
 //     // console.log(e.target.value)
-//   });
+  });

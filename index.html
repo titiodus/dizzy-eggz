@@ -23,6 +23,8 @@
               class="coy-logo"
               alt="The Altschool Africa logo"
             />
+            <div class="banner"></div>
+              
             <div id="id-photo"></div>
             <!-- <img
               src="images/photo-placeholder.png"
@@ -31,10 +33,10 @@
             /> -->
           </div>
           <div class="id-card">
-            <p class="name-label">Name:</p>
-            <p class="school-label">School:</p>
-            <p class="track-label">Track:</p>
-            <p class="id-label">ID Number:</p>
+            <p id="name-label"><span>NAME:</span> </p>
+            <p id="school-label"><span>SCHOOL:</span> </p>
+            <p id="track-label"><span>TRACK:</span> </p>
+            <p id="id-label"><span>ID:</span> </p>
           </div>
         </div>
         <!-- <label for=""     -->
@@ -55,9 +57,9 @@
           <label for="school">Select School</label>
           <select name="school" id="school">
             <option value="">Choose School</option>
-            <option value="School of Data">School of Data</option>
-            <option value="School of Engineering">School of Engineering</option>
-            <option value="School of Products">School of Product</option>
+            <option value="Data">Data</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Products">Product</option>
           </select>
           <label for="track">Select Track</label>
           <select name="track" id="track">
@@ -80,7 +82,11 @@
             placeholder="Enter your ID number"
             required
           />
-          <button id="select-btn">Select</button>
+          <div id="btns">
+            <button id="select-btn">Select</button>
+            <button id="download-btn">Download</button>
+          </div>
+          
         </form>
       </div>
     </main>
