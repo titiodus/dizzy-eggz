@@ -24,14 +24,10 @@
               alt="The Altschool Africa logo"
             />
             <div class="banner"></div>
-              
+
             <div id="id-photo"></div>
-            <!-- <img
-              src="images/photo-placeholder.png"
-              class="id-photo"
-              alt="student photo placeholder"
-            /> -->
           </div>
+
           <div class="id-card">
             <p id="name-label"><span>NAME:</span> </p>
             <p id="school-label"><span>SCHOOL:</span> </p>
@@ -39,13 +35,19 @@
             <p id="id-label"><span>ID:</span> </p>
           </div>
         </div>
-        <!-- <label for=""     -->
+        
       </div>
+      
 
       <div class="right-container">
         <form class="card-info" action="#" method="post">
           <label for="my-photo">Select a file:</label>
-          <input type="file" id="my-photo" name="my-photo" accept="image/png, image/jpg, image/jpeg"/>
+          <input
+            type="file"
+            id="my-photo"
+            name="my-photo"
+            accept="image/png, image/jpg, image/jpeg"
+          />
           <label for="fullname">Full Name</label>
           <input
             type="text"
@@ -84,12 +86,13 @@
           />
           <div id="btns">
             <button id="select-btn">Select</button>
+            <a href="#" id="download-link" download="MyAltschoolIdCard.png"></a>
             <button id="download-btn">Download</button>
           </div>
-          
         </form>
       </div>
     </main>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

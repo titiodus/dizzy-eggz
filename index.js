@@ -8,6 +8,7 @@ const fullName = document.getElementById("fullname");
 const school = document.getElementById("school");
 const track = document.getElementById("track");
 const idNumber = document.getElementById("idNumber");
+const downloadBtn = document.getElementById("download-btn");
 let imgUploader = "";
 
 myPhoto.addEventListener("change", function(){
@@ -25,26 +26,31 @@ function getInputs(){
   schoolLabel.innerHTML += school.value;
   trackLabel.innerHTML += track.value;
   idLabel.innerHTML += idNumber.value;
-  const data = {nameLabel, schoolLabel, trackLabel, idLabel}
-  // console.log(data)
 }
 
 
-// Creating the event listener
+// Creating the event listener for the select button
 document
   .getElementById("select-btn")
   .addEventListener("click", function(event) {
     event.preventDefault();
     getInputs();
-    // nameLabel.innerHTML = fullName.value;
-//     // photoLoader()
-//     let photo = myPhoto.value;
-//     let name = fullName.value;
-//     let mySchool = school.value;
-//     let myTrack = track.value;
-//     let myIdNumber = idNumber.value;
-//     alert(` My name is ${name}. I am a student in ALtSchool Africa and enrolled in ${mySchool}. My track is ${myTrack} and my ID Number is ${myIdNumber}`);
-//     // alert(myTrack)
-
-//     // console.log(e.target.value)
   });
+
+let dwnloadCard = () => {
+  html2canvas(document.querySelector(".card")).then(canvas => {
+    let downloadLink = document.getElementById("download-link");
+    console.log(canvas);
+    // document.body.appendChild(canvas);
+    downloadLink.href = canvas.toDataURL();
+    downloadLink.click();
+  });
+}
+
+  // Creating the event listener for the download button
+downloadBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+  dwnloadCard();
+  // downloadBtn.href = document.querySelector("#id-card").toDataURL();
+  // downloadBtn.download = "id-card.png";
+})

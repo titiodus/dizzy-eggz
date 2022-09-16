@@ -13,6 +13,8 @@ body {
 /* LAYOUT */
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 370px;
     width: 90%;
     /* border: 2px solid red; */
@@ -133,6 +135,7 @@ form {
     padding: 3px 5px;
     border-radius: 5px;
     border: 1px solid #676767;
+    cursor: pointer;
 }
 
 span {
