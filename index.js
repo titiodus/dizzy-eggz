@@ -1,4 +1,5 @@
 // Declaring the variables
+const idPhoto = document.getElementById("id-photo");
 const nameLabel = document.getElementById("name-label");
 const schoolLabel = document.getElementById("school-label");
 const trackLabel = document.getElementById("track-label");
@@ -39,9 +40,7 @@ document
 
 let dwnloadCard = () => {
   html2canvas(document.querySelector(".card")).then(canvas => {
-    let downloadLink = document.getElementById("download-link");
-    console.log(canvas);
-    // document.body.appendChild(canvas);
+    let downloadLink = document.getElementById("download-link"); 
     downloadLink.href = canvas.toDataURL();
     downloadLink.click();
   });
@@ -51,6 +50,11 @@ let dwnloadCard = () => {
 downloadBtn.addEventListener("click", function(event) {
   event.preventDefault();
   dwnloadCard();
-  // downloadBtn.href = document.querySelector("#id-card").toDataURL();
-  // downloadBtn.download = "id-card.png";
+  document.querySelector('.card-info').reset();
+  idPhoto.style.backgroundImage = "url('')";
+  nameLabel.innerHTML = "Name: ";
+  schoolLabel.innerHTML = "School: ";
+  trackLabel.innerHTML = "Track: ";
+  idLabel.innerHTML = "ID: ";
+  
 })
