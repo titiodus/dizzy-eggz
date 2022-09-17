@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-image: url("images/email-pattern.webp");
 
 }
@@ -17,7 +17,6 @@ body {
     flex-wrap: wrap;
     max-width: 370px;
     width: 90%;
-    /* border: 2px solid red; */
     margin: 40px auto;
     display: flex;
     justify-content: space-between;
@@ -28,7 +27,6 @@ body {
 .coy-logo {
     width: 100%; 
     max-width: 70px;
-    /* border: 2px sold orangered; */
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -57,11 +55,8 @@ body {
 .left-container {
     width: 185px;
     display: flex;
-    /* border: 2px solid green; */
     text-align: center;
-    background-color: #E8E3DD;
-    /* background-color: #FDF5EE; */
-    
+    background-color: #E8E3DD;    
 }
 
 .photos {
@@ -76,17 +71,33 @@ body {
 .id-card {
     background: #fefefe;
     height: 49%;
+    /* text-align: left; */
+    /* padding-left: 5px; */
+}
+
+
+
+#name-label 
+#id-label,
+#school-label,
+#track-label,
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 #name-label {
-    margin-block-start: 0;
-    margin-block-end: 0;
     padding-top: 5px;
 }
 
-#id-label {
-    margin-block-start: 0;
-    margin-block-end: 0;
+#track-label {
+    margin-bottom: 20px;
+}
+
+#id-label,
+#school-label,
+#track-label {
+    margin-top: 12px;
 }
 
 .right-container {
@@ -121,7 +132,7 @@ form {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 14px 5px;
+    margin: 19px 5px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -139,8 +150,33 @@ form {
     cursor: pointer;
 }
 
-span {
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
+/* TYPOGRAPHY */
+
+#fullname,
+#school,
+#track,
+#idNumber {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
+ 
+
+span {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+#fine-print {
+    font-size: 8px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    display: none;
+}
+
+

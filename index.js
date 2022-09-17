@@ -56,5 +56,6 @@ downloadBtn.addEventListener("click", function(event) {
   schoolLabel.innerHTML = "School: ";
   trackLabel.innerHTML = "Track: ";
   idLabel.innerHTML = "ID: ";
+  document.querySelector('#fine-print').style.display = 'block'
   
 })

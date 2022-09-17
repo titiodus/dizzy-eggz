@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap"
-      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?Roboto:wght@300;700&display=swap" rel="stylesheet">
     />
     <title>ALTSCHOOL ID CARD</title>
   </head>
@@ -30,9 +29,11 @@
 
           <div class="id-card">
             <p id="name-label"><span>NAME:</span> </p>
+            <p id="id-label"><span>ID:</span> </p>
             <p id="school-label"><span>SCHOOL:</span> </p>
             <p id="track-label"><span>TRACK:</span> </p>
-            <p id="id-label"><span>ID:</span> </p>
+            <p id="fine-print">Valid Until April 2023</p>
+            <p id="fine-print">REMOTE: FULL TIME</p>
           </div>
         </div>
         
@@ -56,6 +57,14 @@
             placeholder="FirstName LastName"
             required
           />
+          <label for="idNumber">ID Number</label>
+          <input
+            type="text"
+            id="idNumber"
+            name="idNumber"
+            placeholder="Enter your ID number"
+            required
+          />
           <label for="school">Select School</label>
           <select name="school" id="school">
             <option value="">Choose School</option>
@@ -76,14 +85,6 @@
             <option value="Product Management">Product Management</option>
             <option value="Product Marketing">Product Marketing</option>
           </select>
-          <label for="idNumber">ID Number</label>
-          <input
-            type="text"
-            id="idNumber"
-            name="idNumber"
-            placeholder="Enter your ID number"
-            required
-          />
           <div id="btns">
             <button id="select-btn">Select</button>
             <a href="#" id="download-link" download="MyAltschoolIdCard.png"></a>
