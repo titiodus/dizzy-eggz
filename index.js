@@ -12,24 +12,6 @@ const idNumber = document.getElementById("idNumber");
 const downloadBtn = document.getElementById("download-btn");
 let imgUploader = "";
 
-myPhoto.addEventListener("change", function(){
-  // alert(myPhoto.value)
-  const reader = new FileReader();
-  reader.addEventListener("load", () => {
-    imgUploader = reader.result
-    document.querySelector('#id-photo').style.backgroundImage=`url(${imgUploader})`
-  });
-  reader.readAsDataURL(this.files[0]);
-})
-
-function getInputs(){
-   nameLabel.innerHTML += fullName.value;
-  schoolLabel.innerHTML += school.value;
-  trackLabel.innerHTML += track.value;
-  idLabel.innerHTML += idNumber.value;
-  // document.querySelector('#fine-print').style.display = 'block';
-}
-
 // FUnction to display/hide fine print
 function showFinePrint(){
   const finePrint = document.querySelector('#fine-print')
@@ -40,14 +22,36 @@ function showFinePrint(){
   }
 }
 
+// to show the image on the card 
+myPhoto.addEventListener("change", function(){
+  // alert(myPhoto.value)
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    imgUploader = reader.result
+    document.querySelector('#id-photo').style.backgroundImage=`url(${imgUploader})`
+  });
+  reader.readAsDataURL(this.files[0]);
+})
+
+// to show the value in the input field on the card
+function getInputs(){
+   nameLabel.innerHTML += fullName.value;
+  schoolLabel.innerHTML += school.value;
+  trackLabel.innerHTML += track.value;
+  idLabel.innerHTML += idNumber.value;
+  
+}
+
 // Creating the event listener for the select button
 document
   .getElementById("select-btn")
   .addEventListener("click", function(event) {
     event.preventDefault();
     getInputs();
+    showFinePrint();
   });
 
+// Function to get the card for the download 
 let dwnloadCard = () => {
   html2canvas(document.querySelector(".card")).then(canvas => {
     let downloadLink = document.getElementById("download-link"); 
@@ -59,7 +63,6 @@ let dwnloadCard = () => {
   // Creating the event listener for the download button
 downloadBtn.addEventListener("click", function(event) {
   event.preventDefault();
-  showFinePrint();
   dwnloadCard();
   document.querySelector('.card-info').reset();
   idPhoto.style.backgroundImage = "url('')";
