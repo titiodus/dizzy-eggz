@@ -22,6 +22,7 @@ function showFinePrint(){
   }
 }
 
+console.log(showFinePrint())
 // to show the image on the card 
 myPhoto.addEventListener("change", function(){
   // alert(myPhoto.value)
