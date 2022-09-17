@@ -27,8 +27,18 @@ function getInputs(){
   schoolLabel.innerHTML += school.value;
   trackLabel.innerHTML += track.value;
   idLabel.innerHTML += idNumber.value;
+  // document.querySelector('#fine-print').style.display = 'block';
 }
 
+// FUnction to display/hide fine print
+function showFinePrint(){
+  const finePrint = document.querySelector('#fine-print')
+  if(finePrint.style.display === 'none'){
+    finePrint.style.display = 'block';
+  }else{
+    finePrint.style.display = 'none';
+  }
+}
 
 // Creating the event listener for the select button
 document
@@ -49,6 +59,7 @@ let dwnloadCard = () => {
   // Creating the event listener for the download button
 downloadBtn.addEventListener("click", function(event) {
   event.preventDefault();
+  showFinePrint();
   dwnloadCard();
   document.querySelector('.card-info').reset();
   idPhoto.style.backgroundImage = "url('')";
@@ -56,6 +67,6 @@ downloadBtn.addEventListener("click", function(event) {
   schoolLabel.innerHTML = "School: ";
   trackLabel.innerHTML = "Track: ";
   idLabel.innerHTML = "ID: ";
-  document.querySelector('#fine-print').style.display = 'block'
+  
   
 })
