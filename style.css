@@ -36,6 +36,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
 .banner {
     width: 100%;
@@ -186,6 +187,7 @@ span {
 
 .sch-name {
     padding: 5px;
-    font-weight: 700;}
+    font-weight: 700;
+}
 
 
