@@ -32,6 +32,11 @@ body {
     background-color: transparent;
 }
 
+.logo-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 .banner {
     width: 100%;
     max-width: 300px;
@@ -178,5 +183,9 @@ span {
     font-weight: 700;
     display: none;
 }
+
+.sch-name {
+    padding: 5px;
+    font-weight: 700;}
 
 
