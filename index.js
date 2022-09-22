@@ -36,10 +36,10 @@ myPhoto.addEventListener("change", function(){
 
 // to show the value in the input field on the card
 function getInputs(){
-   nameLabel.innerHTML += fullName.value;
-  schoolLabel.innerHTML += school.value;
-  trackLabel.innerHTML += track.value;
-  idLabel.innerHTML += idNumber.value;
+   nameLabel.innerHTML = fullName.value;
+  schoolLabel.innerHTML = school.value;
+  trackLabel.innerHTML = track.value;
+  idLabel.innerHTML = idNumber.value;
   
 }
 
@@ -67,10 +67,10 @@ downloadBtn.addEventListener("click", function(event) {
   dwnloadCard();
   document.querySelector('.card-info').reset();
   idPhoto.style.backgroundImage = "url('')";
-  nameLabel.innerHTML = "Name: ";
-  schoolLabel.innerHTML = "School: ";
-  trackLabel.innerHTML = "Track: ";
-  idLabel.innerHTML = "ID: ";
+  nameLabel.innerHTML = "";
+  schoolLabel.innerHTML = "";
+  trackLabel.innerHTML = "";
+  idLabel.innerHTML = "";
   
   
 })
