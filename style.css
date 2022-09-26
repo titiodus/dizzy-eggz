@@ -18,7 +18,6 @@ body {
     max-width: 370px;
     width: 90%;
     margin: 40px auto;
-    display: flex;
     justify-content: space-between;
     box-shadow: rgb(38, 57, 77)0px 20px 30px -10px;
     border-radius: 10px;
