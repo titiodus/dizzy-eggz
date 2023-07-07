@@ -3,6 +3,9 @@
 }
 
 body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -21,6 +24,7 @@ body {
     justify-content: space-between;
     box-shadow: rgb(38, 57, 77)0px 20px 30px -10px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .coy-logo {
@@ -53,6 +57,7 @@ body {
    margin: 0;
    padding: 0;
    border: 1px solid #676767;
+   border-radius: 5px;
    background-position: center; 
    background-size: cover;
 }
@@ -111,13 +116,13 @@ p {
     border-left: 2px solid #676767;
     background: #d3d3d3;
     padding-top: 15px;
-    padding-left: 10px;
+    padding-inline: 10px;
     
 }
 
 form {
     max-width: 182px;
-    max-width: 80%;   
+    max-width: 100%;
 }
 
 #btns {
@@ -140,6 +145,14 @@ form {
     margin: 19px 5px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+#select-btn {
+    margin-inline-start: 0;
+}
+
+#download-btn {
+    margin-inline-end: 0;
 }
 
 #my-photo,

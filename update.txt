@@ -1,0 +1,5 @@
+1. Centered whole page (body element) - @line 6-9
+2. Border-radius of .container @line 27
+3. Added equal padding on the right of .right-container @line 119
+4. Made form's max-width 100% @line 125
+5. Worked on the #select-btn and #download-btn margins.
