@@ -15,7 +15,10 @@ let imgUploader = "";
 // FUnction to display/hide fine print
 function showFinePrint(){
   const finePrint = document.querySelector('#fine-print')
-  if(finePrint.style.display === 'none'){
+  let year = idNumber.value.split('/');
+  let currentyear = Number('2' + year[2]) + 1;
+  finePrint.innerHTML = `Valid Until April ${currentyear} REMOTE: FULL TIME`;
+  if(idNumber.value !== ''){
     finePrint.style.display = 'block';
   }else{
     finePrint.style.display = 'none';
@@ -53,10 +56,26 @@ document
   });
 
 // Function to get the card for the download 
-let dwnloadCard = () => {
+let dwnloadCard = (format = 'jpg') => {
+  let mimeType;
+
+  // Determine the MIME type based on the format
+  if (format === 'png') {
+    mimeType = 'image/png';
+  } else if (format === 'jpeg') {
+    mimeType = 'image/jpeg';
+  } else if (format === 'webp') {
+    mimeType = 'image/webp';
+  } else {
+    // Default to jpg if the format is not specified
+    format = 'jpg';
+    mimeType = 'image/jpg';
+  }
+
   html2canvas(document.querySelector(".card")).then(canvas => {
     let downloadLink = document.getElementById("download-link"); 
-    downloadLink.href = canvas.toDataURL();
+    downloadLink.href = canvas.toDataURL(mimeType);
+    downloadLink.download = `MyAltSchoolIdCard.${format}`; // Specify the filename with the desired format extension
     downloadLink.click();
   });
 }
@@ -64,13 +83,14 @@ let dwnloadCard = () => {
   // Creating the event listener for the download button
 downloadBtn.addEventListener("click", function(event) {
   event.preventDefault();
-  dwnloadCard();
-  document.querySelector('.card-info').reset();
-  idPhoto.style.backgroundImage = "url('')";
-  nameLabel.innerHTML = "";
-  schoolLabel.innerHTML = "";
-  trackLabel.innerHTML = "";
-  idLabel.innerHTML = "";
-  
-  
+  let format = prompt('Enter desired image format (jpg, jpeg, webp, or png):', 'jpg')
+  if (format !== null) {
+    dwnloadCard(format);
+    document.querySelector('.card-info').reset();
+    idPhoto.style.backgroundImage = "url('')";
+    nameLabel.innerHTML = "";
+    schoolLabel.innerHTML = "";
+    trackLabel.innerHTML = "";
+    idLabel.innerHTML = "";
+  }  
 })
