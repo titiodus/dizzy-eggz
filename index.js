@@ -18,7 +18,7 @@ function showFinePrint(){
   let year = idNumber.value.split('/');
   let currentyear = Number('2' + year[2]) + 1;
   finePrint.innerHTML = `Valid Until April ${currentyear} REMOTE: FULL TIME`;
-  if(finePrint.style.display === 'none'){
+  if(idNumber.value !== ''){
     finePrint.style.display = 'block';
   }else{
     finePrint.style.display = 'none';
@@ -83,14 +83,14 @@ let dwnloadCard = (format = 'jpg') => {
   // Creating the event listener for the download button
 downloadBtn.addEventListener("click", function(event) {
   event.preventDefault();
-  let format = prompt('Enter desired image format (jpg, jpeg, webp, or png):')
-  dwnloadCard(format);
-  document.querySelector('.card-info').reset();
-  idPhoto.style.backgroundImage = "url('')";
-  nameLabel.innerHTML = "";
-  schoolLabel.innerHTML = "";
-  trackLabel.innerHTML = "";
-  idLabel.innerHTML = "";
-  
-  
+  let format = prompt('Enter desired image format (jpg, jpeg, webp, or png):', 'jpg')
+  if (format !== null) {
+    dwnloadCard(format);
+    document.querySelector('.card-info').reset();
+    idPhoto.style.backgroundImage = "url('')";
+    nameLabel.innerHTML = "";
+    schoolLabel.innerHTML = "";
+    trackLabel.innerHTML = "";
+    idLabel.innerHTML = "";
+  }  
 })
